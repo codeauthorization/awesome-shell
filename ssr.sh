@@ -528,6 +528,7 @@ Write_configuration(){
     "server_port": ${ssr_port},
     "local_address": "127.0.0.1",
     "local_port": 1080,
+
     "password": "${ssr_password}",
     "method": "${ssr_method}",
     "protocol": "${ssr_protocol}",
@@ -536,6 +537,7 @@ Write_configuration(){
     "obfs_param": "",
     "speed_limit_per_con": ${ssr_speed_limit_per_con},
     "speed_limit_per_user": ${ssr_speed_limit_per_user},
+
     "additional_ports" : {},
     "timeout": 120,
     "udp_timeout": 60,
@@ -553,6 +555,7 @@ Write_configuration_many(){
     "server_ipv6": "::",
     "local_address": "127.0.0.1",
     "local_port": 1080,
+
     "port_password":{
         "${ssr_port}":"${ssr_password}"
     },
@@ -563,6 +566,7 @@ Write_configuration_many(){
     "obfs_param": "",
     "speed_limit_per_con": ${ssr_speed_limit_per_con},
     "speed_limit_per_user": ${ssr_speed_limit_per_user},
+
     "additional_ports" : {},
     "timeout": 120,
     "udp_timeout": 60,
@@ -1448,6 +1452,7 @@ check_sys
 [[ ${release} != "debian" ]] && [[ ${release} != "ubuntu" ]] && [[ ${release} != "centos" ]] && echo -e "${Error} 本脚本不支持当前系统 ${release} !" && exit 1
 echo -e "  ShadowsocksR 一键管理脚本 ${Red_font_prefix}[v${sh_ver}]${Font_color_suffix}
   ---- Toyo | doub.io/ss-jc42 ----
+
   ${Green_font_prefix}1.${Font_color_suffix} 安装 ShadowsocksR
   ${Green_font_prefix}2.${Font_color_suffix} 更新 ShadowsocksR
   ${Green_font_prefix}3.${Font_color_suffix} 卸载 ShadowsocksR
